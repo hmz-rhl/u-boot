@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 /*
- * Copyright (C) 2017 Icenowy Zheng <icenowy@aosc.io>
+ * Copyright (C) 2024 Hamza RAHAL <hamza.rahal@gmx.fr>
  *
- * Based on sun8i-h3-bananapi-m2-plus.dts, which is:
- *   Copyright (C) 2016 Chen-Yu Tsai <wens@csie.org>
+ * Based on sun8i-h2-plus-m2-zero.dts, which is:
+ *   Copyright (C) 2017 Icenowy Zheng <icenowy@aosc.io>
  */
 
 /dts-v1/;
@@ -14,8 +14,8 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	model = "Banana Pi BPI-M2-Zero";
-	compatible = "sinovoip,bpi-m2-zero", "allwinner,sun8i-h2-plus";
+	model = "Banana Pi BPI-P2-Zero";
+	compatible = "sinovoip,bpi-m2-zero", "allwinner,sun8i-h2-plus", "sinovoip,bpi-p2-zero";
 
 	aliases {
 		serial0 = &uart0;
