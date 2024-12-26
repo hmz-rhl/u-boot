@@ -4,7 +4,10 @@ CONFIG_DEFAULT_DEVICE_TREE="custom"
 CONFIG_SPL=y
 CONFIG_MACH_SUN8I_H3=y
 CONFIG_DRAM_CLK=408
-# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
 CONFIG_MMC_SUNXI_SLOT_EXTRA=2
+# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
+CONFIG_USE_BOOTARGS=y
+CONFIG_BOOTARGS="root=/dev/mmcblk1p1 rootwait rw earlyprintk"
+CONFIG_BOOTCOMMAND="load mmc 0:1 ${loadaddr} boot/zImage; load mmc 0:1 ${fdt_addr_r} boot/custom.dtb; bootz ${loadaddr} - ${fdt_addr_r}"
 CONFIG_SUN8I_EMAC=y
 CONFIG_USB_EHCI_HCD=y
